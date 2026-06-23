@@ -16,6 +16,7 @@ class ResConfigSettings(models.TransientModel):
         for record in self:
             if not record.cookiefirst_enabled:
                 record.website_id.update({"cookiefirst_identifier": False})
+                print("Cookiefirst disabled")
 
     cookiefirst_identifier = fields.Char(
         string="Cookiefirst ID",
