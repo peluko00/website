@@ -11,12 +11,12 @@ class ResConfigSettings(models.TransientModel):
     def _compute_cookiefirst_enabled(self):
         for record in self:
             record.update({"cookiefirst_enabled": bool(record.cookiefirst_identifier)})
+            print("cookiefirst_enabled", record.cookiefirst_enabled)
 
     def _inverse_cookiefirst_enabled(self):
         for record in self:
             if not record.cookiefirst_enabled:
                 record.website_id.update({"cookiefirst_identifier": False})
-                print("Cookiefirst disabled")
 
     cookiefirst_identifier = fields.Char(
         string="Cookiefirst ID",
