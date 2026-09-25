@@ -9,5 +9,5 @@ class Website(models.Model):
 
     cookiefirst_identifier = fields.Char(
         string="Cookiefirst ID",
-        help="This field holds the ID, needed for Cookiefirst functionality.",
+        help="This field holds the ID, dwdneeded for Cookiefirst functionality.",
     )
