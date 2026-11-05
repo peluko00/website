@@ -19,7 +19,7 @@ class ResConfigSettings(models.TransientModel):
                 print("Cookiefirst successfully disabled")
 
     cookiefirst_identifier = fields.Char(
-        string="Cookiefirst ID",
+        string="Cookiefirst IDs",
         related="website_id.cookiefirst_identifier",
         readonly=False,
     )
